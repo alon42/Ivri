@@ -2,7 +2,6 @@
 import { format } from "date-fns";
 import {arrayOfDatesToRDATE} from "../helpers/rfcHelper.js";
 
-const API_KEY = "AIzaSyDMxqXQUotFEdPp3a5YuIpmY7bhhDvhsiQ";
 const CLIENT_ID = "1020980711555-6v96l8to8mo51b1j2hblbkfj1iih4p04.apps.googleusercontent.com";
 // Discovery doc URL for APIs used by the quickstart
 const DISCOVERY_DOC_ARR = [
@@ -80,7 +79,6 @@ export async function initClient() {
     window.gapi.load("client", () => {
       window.gapi.client
         .init({
-          apiKey: API_KEY,
           discoveryDocs: DISCOVERY_DOC_ARR,
         })
         .then(() => {
